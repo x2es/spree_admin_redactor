@@ -15,8 +15,8 @@ body .imp_redactor_frame {
 body .imp_redactor_box textarea {
 	overflow: auto !important;
 	border: none !important;
-	// border-color: #fff;
-	// width: 99.8% !important;
+	/* border-color: #fff; */
+	/* width: 99.8% !important; */
 	font-size: 13px !important;
 }
 
