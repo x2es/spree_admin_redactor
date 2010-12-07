@@ -1,0 +1,23 @@
+= SpreeAdminRedactor
+
+This is spree extension which replaces all admin's textareas by Imperavi Redactor 
+(https://github.com/x2es/imperavi-redactor)
+
+Original redactor sources and russian documentation: http://imperavi.ru/redactor
+
+Works with Spree-0.30+
+
+== Usage
+
+Just include gem in your Gemfile:
+
+  gem 'spree_admin_redactor', :git => 'git://github.com/x2es/spree_admin_redactor.git' 
+
+And install assets (from your app):
+
+  rake spree_admin_redactor:install:assets
+
+== Inspirited by
+
+  https://github.com/davidnorth/spree-ckeditor
+

@@ -1,0 +1,13 @@
+
+<%= javascript_include_tag '/redactor/redactor' %>
+<%= stylesheet_link_tag '/redactor/css/redactor' %>
+
+<script>
+  $(document).ready(function(){
+    $.each($('textarea'), function(index, element){
+      $(element).redactor();
+    })
+  })
+</script>
+
+
