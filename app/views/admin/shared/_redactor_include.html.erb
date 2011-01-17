@@ -1,13 +1,30 @@
 
-<%= javascript_include_tag '/redactor/redactor' %>
-<%= stylesheet_link_tag '/redactor/css/redactor' %>
+<%
+  # TODO!!! Refactor this propertly
+  # and update readme for initializator usage
+  # this is fast fix - this should be refactored!
+  fl_disable = false
+  if ADMIN_REDACTOR_EXCLUDES && ADMIN_REDACTOR_EXCLUDES.any?
+    ADMIN_REDACTOR_EXCLUDES.each do |action|
+      if action[:controller] == params[:controller] && action[:action] == params[:action]
+        fl_disable = true
+        break
+      end
+    end
+  end
+%>
 
-<script>
-  $(document).ready(function(){
-    $.each($('textarea'), function(index, element){
-      $(element).redactor();
+<% unless fl_disable %>
+
+  <%= javascript_include_tag '/redactor/redactor' %>
+  <%= stylesheet_link_tag '/redactor/css/redactor' %>
+
+  <script>
+    $(document).ready(function(){
+      $.each($('textarea'), function(index, element){
+        $(element).redactor();
+      })
     })
-  })
-</script>
+  </script>
 
-
+<% end %>

@@ -17,6 +17,14 @@ And install assets (from your app):
 
   rake spree_admin_redactor:install:assets
 
+=== Excluding an actions
+
+If you want to disable admin_redactor for some action, then you can define constant like
+
+   ADMIN_REDACTOR_EXCLUDES = [{:controller => 'admin/products', :action => 'edit'}]
+
+(this was fast fix - this should be refactored in future)
+
 == Inspirited by
 
   https://github.com/davidnorth/spree-ckeditor
